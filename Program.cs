@@ -32,15 +32,10 @@
 // int numA = Convert.ToInt32(Console.ReadLine());
 // System.Console.WriteLine("Введите второе наименьшее число");
 // int numB = Convert.ToInt32(Console.ReadLine());
-// int result = numA / numB;
-// if (result == numB)
-// {
+// if (numA / numB == numB)
 //     System.Console.WriteLine("Вы ввели правильные числа ");
-// }
 // else
-// {
 //     System.Console.WriteLine("Вы ввели не верные числа.");
-// }
 
 
 
@@ -51,31 +46,57 @@
 
 // System.Console.WriteLine("Введите число дня недели");
 // int num = Convert.ToInt32(Console.ReadLine());
-// int monday = 1;
-// int tuesday = 2;
-// int wednesday = 3;
-// int thursday = 4;
-// int friday = 5;
-// int saturday = 6;
-// int sunday = 7;
 
-// if (num == monday)
+// if (num == 1)
 // {
 //     System.Console.WriteLine("Понедельник");
 // }
-// else if (num == tuesday)
+// else if (num == 2)
 //     System.Console.WriteLine("Вторник");
-// if (num == wednesday)
+// else if (num == 3)
 //     System.Console.WriteLine("Среда");
-// else if (num == thursday)
+// else if (num == 4)
 //     System.Console.WriteLine("Четверг");
-// if (num == friday)
+// else if (num == 5)
 //     System.Console.WriteLine("Пятница");
-// else if (num == saturday)
+// else if (num == 6)
 //     System.Console.WriteLine("Суббота");
-// if (num == sunday)
+// else if (num == 7)
 //     System.Console.WriteLine("Воскресенье");
-// if (num > 7)
+// else 
 //     System.Console.WriteLine("Вы ввели не правильно число");
-// if (num < 1)
-//     System.Console.WriteLine("Вы ввели не правильно число");
+
+
+
+// Решение через switch case рекомендуется делать если больше 4-5 if
+
+
+System.Console.WriteLine("Введите число от 1 до 7: ");
+int num = Convert.ToInt32(Console.ReadLine());
+switch (num)
+{
+    case 1:
+        System.Console.WriteLine("Понедельник");
+        break;
+    case 2:
+        System.Console.WriteLine("Вторник");
+        break;
+    case 3:
+        System.Console.WriteLine("Среда");
+        break;
+    case 4:
+        System.Console.WriteLine("Четверг");
+        break;
+    case 5:
+        System.Console.WriteLine("Пятница");
+        break;
+    case 6:
+        System.Console.WriteLine("Суббота");
+        break;
+    case 7:
+        System.Console.WriteLine("Воскресенье");
+        break;
+    default:
+        System.Console.WriteLine("Введено не корректное число");
+        break;
+}
