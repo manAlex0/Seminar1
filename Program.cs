@@ -71,32 +71,48 @@
 // Решение через switch case рекомендуется делать если больше 4-5 if
 
 
-System.Console.WriteLine("Введите число от 1 до 7: ");
+// System.Console.WriteLine("Введите число от 1 до 7: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// switch (num)
+// {
+//     case 1:
+//         System.Console.WriteLine("Понедельник");
+//         break;
+//     case 2:
+//         System.Console.WriteLine("Вторник");
+//         break;
+//     case 3:
+//         System.Console.WriteLine("Среда");
+//         break;
+//     case 4:
+//         System.Console.WriteLine("Четверг");
+//         break;
+//     case 5:
+//         System.Console.WriteLine("Пятница");
+//         break;
+//     case 6:
+//         System.Console.WriteLine("Суббота");
+//         break;
+//     case 7:
+//         System.Console.WriteLine("Воскресенье");
+//         break;
+//     default:
+//         System.Console.WriteLine("Введено не корректное число");
+//         break;
+// }
+
+
+
+// Задача №5. Напишите программу, которая на вход принимает одно число (N), а на выходе показывает все целые числа в промежутку от -N до N.
+// 4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4"
+// 2 -> "-2, -1, 0, 1, 2"
+
+System.Console.WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-switch (num)
+int numN = num * -1;
+num = num + 1;
+while (numN < num)
 {
-    case 1:
-        System.Console.WriteLine("Понедельник");
-        break;
-    case 2:
-        System.Console.WriteLine("Вторник");
-        break;
-    case 3:
-        System.Console.WriteLine("Среда");
-        break;
-    case 4:
-        System.Console.WriteLine("Четверг");
-        break;
-    case 5:
-        System.Console.WriteLine("Пятница");
-        break;
-    case 6:
-        System.Console.WriteLine("Суббота");
-        break;
-    case 7:
-        System.Console.WriteLine("Воскресенье");
-        break;
-    default:
-        System.Console.WriteLine("Введено не корректное число");
-        break;
+    System.Console.Write(numN + " ");
+    numN++;
 }
