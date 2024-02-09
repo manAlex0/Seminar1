@@ -4,7 +4,6 @@
 // -3 -> 9
 // -7 -> 49
 
-
 // System.Console.WriteLine("Введите целое число: ");
 // int num = Convert.ToInt32(Console.ReadLine());
 // int result = num * num;
@@ -19,8 +18,7 @@
 // else
 //     System.Console.WriteLine("Вы ввели отрицательное число");
 
-
-
+//******************************************************
 
 // Задача №1. Напишите программу, которая на вход принимает два числа и проверяет, является ли первое число квадратом второго.
 // a = 25, b = 5 -> да
@@ -37,12 +35,13 @@
 // else
 //     System.Console.WriteLine("Вы ввели не верные числа.");
 
-
+//******************************************************
 
 // Задача №3. Напишите программу, которая будет выдавать название для недели по заданному номеру.
 // 3 -> Среда
 // 5 -> Пятница
 
+// Простое решение через else if
 
 // System.Console.WriteLine("Введите число дня недели");
 // int num = Convert.ToInt32(Console.ReadLine());
@@ -66,7 +65,7 @@
 // else 
 //     System.Console.WriteLine("Вы ввели не правильно число");
 
-
+//.....................................................
 
 // Решение через switch case рекомендуется делать если больше 4-5 if
 
@@ -101,18 +100,54 @@
 //         break;
 // }
 
-
+//******************************************************
 
 // Задача №5. Напишите программу, которая на вход принимает одно число (N), а на выходе показывает все целые числа в промежутку от -N до N.
 // 4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4"
 // 2 -> "-2, -1, 0, 1, 2"
 
+// Через цикл while:
+
+// System.Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int numN = num * -1;
+// while (numN <= num)
+// {
+//     System.Console.Write(numN + " ");
+//     numN++;
+// }
+
+//.....................................................
+
+// Через цикл for:
+
+// System.Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int numN = num * -1;
+// for (int i = num; i >= numN; numN++)
+// {
+//     System.Console.Write(numN + " ");
+// }
+
+//******************************************************
+
+// Задача №6. Написать программу которая посчитает остаток от числа 10.
+
+// System.Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int digit = num % 10;
+// System.Console.WriteLine("Остаток равен " + digit);
+
+//******************************************************
+
+// Задача. Выводить 3е число если оно есть, если нет то прописать, что его нет.
+
 System.Console.WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int numN = num * -1;
-num = num + 1;
-while (numN < num)
+if (num >= 100)
 {
-    System.Console.Write(numN + " ");
-    numN++;
+while (num / 1000 > 0)
+    num /= 10; // num = num / 10
+    System.Console.WriteLine(num%10);
 }
+else System.Console.WriteLine("Третьей цифры нет");
